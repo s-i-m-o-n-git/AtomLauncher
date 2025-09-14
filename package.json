@@ -1,14 +1,36 @@
 {
-  "name": "helioslauncher",
+  "name": "atomlauncher",
   "version": "2.2.1",
   "productName": "Atom Launcher",
   "description": "Modded Minecraft Launcher",
-  "author": "Daniel Scalzi (https://github.com/dscalzi/)",
-  "license": "UNLICENSED",
-  "homepage": "https://github.com/dscalzi/HeliosLauncher",
+  "author": "Simon (https://github.com/s-i-m-o-n-git/)",
+  "license": "Credit for Daniel Scalzi ",
+  "homepage": "https://github.com/s-i-m-o-n-git/AtomLauncher/",
   "bugs": {
-    "url": "https://github.com/dscalzi/HeliosLauncher/issues"
+    "url": "https://github.com/s-i-m-o-n-git/AtomLauncher/issues"
   },
+  "build": {
+  "appId": "com.atom.launcher",
+  "productName": "Atom Launcher",
+  "files": [
+    "index.js",
+    "app/**",
+    "node_modules/**",
+    "package.json"
+  ],
+  "directories": {
+    "buildResources": "build"
+  },
+  "win": {
+    "target": "nsis"
+  },
+  "mac": {
+    "target": "dmg"
+  },
+  "linux": {
+    "target": "AppImage"
+  }
+},
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -48,8 +70,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dscalzi/HeliosLauncher.git"
-  },
-  "directories": {
-    "doc": "docs"
   }
+  
 }
